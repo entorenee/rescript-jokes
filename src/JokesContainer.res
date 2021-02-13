@@ -1,6 +1,6 @@
 @react.component
 let make = () => {
-  let (state, send) = React.useReducer(JokesMachine.jokeMachine, JokesMachine.Initial)
+  let (state, send) = React.useReducer(JokesMachine.jokeMachine, Initial)
 
   let getNewJokes = () => {
     open Js.Promise
@@ -19,7 +19,8 @@ let make = () => {
     {switch state {
     | Initial => <button onClick={_ => getNewJokes()}> {"Get Jokes"->React.string} </button>
     | Loading => <span> {"Getting Jokes"->React.string} </span>
-    | Success(jokeState) => <div>
+    | Success(jokeState) =>
+      <div>
         {Belt.Array.get(jokeState.jokes, 0)
         ->Belt.Option.mapWithDefault("No joke found", j => j.setup)
         ->React.string}
