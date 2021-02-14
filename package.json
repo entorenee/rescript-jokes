@@ -5,9 +5,8 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
-    "server": "moduleserve ./ --port 8000",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "parcel index.html"
+    "serve": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "BuckleScript",
@@ -24,8 +23,11 @@
     "reason-react": ">=0.7.1"
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
     "bs-platform": "^8.4.2",
-    "moduleserve": "^0.9.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   }
 }
