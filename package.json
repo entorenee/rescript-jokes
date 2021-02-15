@@ -23,6 +23,7 @@
     "reason-react": ">=0.7.1"
   },
   "devDependencies": {
+    "@dylanirlbeck/tailwind-ppx": "^0.8.4",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
     "bs-platform": "^8.4.2",
